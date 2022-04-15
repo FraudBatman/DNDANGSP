@@ -1,0 +1,11 @@
+img {
+    float: right;
+    width: 45%;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+div {
+    z-index: 0;
+}

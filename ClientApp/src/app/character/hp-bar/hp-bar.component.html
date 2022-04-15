@@ -1,0 +1,4 @@
+<div *ngIf="this.char != null">
+    {{this.char.hitPoint.current + this.char.hitPoint.temporary}} / {{this.char.hitPoint.maximum}} HP
+    {{this.char.hitPoint.temporary > 0 ? '( ' + this.char.hitPoint.temporary + ' Temp. )' : ""}}
+</div>

@@ -1,0 +1,4 @@
+<h1 mat-dialog-title>{{this.charClass.name}} | Level {{this.charClass.level}}</h1>
+<div mat-dialog-content>
+    <p *ngFor="let feat of this.charClass.feats"><em>{{feat.name}}:</em> {{feat.description}}</p>
+</div>

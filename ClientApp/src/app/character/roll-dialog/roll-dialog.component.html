@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>
+    {{this.data.title | titlecase}}
+</h1>
+<h3>
+    {{this.data.calc.formula | lowercase}}
+</h3>
+<div mat-dialog-content>
+    <h1>{{this.displayNumber}}</h1>
+    <div *ngIf="this.showCritStatus">
+        <h2 *ngIf="this.data.calc.didCrit; else Calculated">{{this.data.calc.dieValue[0] > 1 ?
+            "CRITICAL HIT!!!" :
+            "AUTOMATIC MISS"}}</h2>
+    </div>
+</div>
+
+<ng-template #Calculated>
+    {{this.data.calc.toString()}}
+</ng-template>

@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>{{this.output}}</h1>
+<div mat-dialog-content>
+    <div *ngIf="this.char != null">
+        <button (click)="addMod('strength')">STR</button>
+        <button (click)="addMod('dexterity')">DEX</button>
+        <button (click)="addMod('constitution')">CON</button>
+        <button (click)="addMod('intelligence')">INT</button>
+        <button (click)="addMod('wisdom')">WIS</button>
+        <button (click)="addMod('charisma')">CHA</button>
+        <button (click)="addMod('proficiency')">PROF</button>
+    </div>
+    <div>
+        <button (click)="addToOutput('d4')">d4</button>
+        <button (click)="addToOutput('d6')">d6</button>
+        <button (click)="addToOutput('d8')">d8</button>
+        <button (click)="addToOutput('d10')">d10</button>
+        <button (click)="addToOutput('d12')">d12</button>
+        <button (click)="addToOutput('d20')">d20</button>
+        <button (click)="addToOutput('d')">dx</button><button (click)="addToOutput('d100')">d100</button>
+    </div>
+    <div>
+        <button (click)="addToOutput('1')">1</button>
+        <button (click)="addToOutput('2')">2</button>
+        <button (click)="addToOutput('3')">3</button>
+        <button (click)="addToOutput('4')">4</button>
+        <button (click)="addToOutput('5')">5</button>
+        <button (click)="addToOutput('6')">6</button>
+        <button (click)="addToOutput('7')">7</button>
+        <button (click)="addToOutput('8')">8</button>
+        <button (click)="addToOutput('9')">9</button>
+        <button (click)="addToOutput('0')">0</button>
+    </div>
+    <div>
+        <button (click)="addToOutput('+')">+</button>
+        <button (click)="addToOutput('-')">-</button>
+        <button (click)="addToOutput('/')">/</button>
+        <button (click)="addToOutput('*')">*</button>
+        <button (click)="calculate()">=</button>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div *ngIf="charLoaded; else NotLoaded">
+    <table>
+        <tr>
+            <th>Ability</th>
+            <th>Modifier</th>
+            <th>Saving Throw</th>
+        </tr>
+        <tr *ngFor="let ability of this.char.abilities">
+            <td>{{ability.name | titlecase}}</td>
+            <td (click)="roll(ability, false)">{{ability.value | modifier}}</td>
+            <td (click)="roll(ability, true)">{{this.modPipe.transformWithAddition(ability.value,
+                (ability.savingThrowProficiency ?
+                this.char.profBonus : 0))}}
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>Skill</th>
+            <th>Modifier</th>
+        </tr>
+        <tr *ngFor="let skill of this.char.skills">
+            <td (click)="rollSkill(skill)">{{skill.name + (skill.proficiency ? "*" : "")}}</td>
+            <td (click)="rollSkill(skill)">{{this.getSkillMod(skill)}}</td>
+        </tr>
+    </table>
+</div>
+
+<ng-template #NotLoaded>
+    <p>Loading Skills...</p>
+</ng-template>

@@ -1,0 +1,22 @@
+<div *ngIf="charLoaded; else NotLoaded">
+
+    <div id="picture">
+        <img src="{{this.char.picture}}">
+    </div>
+
+    <h3>{{char.race}}</h3>
+    <ul>
+        <li *ngFor="let class of char.classes"><span (click)="displayClass(class)">{{class.name}}: Level
+                {{class.level}}</span></li>
+    </ul>
+    <ul>
+        <li *ngFor="let ability of char.abilities">
+            <div (click)="roll(ability)">{{ability.name | titlecase}}: {{ability.value}} ({{ability.value |
+                modifier}})</div>
+        </li>
+    </ul>
+</div>
+
+<ng-template #NotLoaded>
+    <p>Loading Main...</p>
+</ng-template>
