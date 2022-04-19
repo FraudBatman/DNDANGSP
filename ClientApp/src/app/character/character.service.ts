@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Subject, Observable, tap, BehaviorSubject } from "rxjs";
 import { ICharacter } from "../../models/character";
@@ -8,14 +8,15 @@ import { ICharacter } from "../../models/character";
 })
 export class CharacterService {
 
-  private apiUrl = "../../assets/exampleCharacter.json"
+  private testUrl = "../../assets/exampleCharacter.json"
+  private apiUrl = "DNDData"
 
   public character$ = new BehaviorSubject<ICharacter>({} as any);
   public charLoaded = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) { }
 
-  public getCharacter(url = this.apiUrl): void {
+  public getCharacter(url = this.baseUrl + this.apiUrl): void {
     if (!this.charLoaded) {
       this.http.get<ICharacter>(url).subscribe(char => {
         this.character$.next(char);

@@ -1,0 +1,195 @@
+{
+    "name": "test name",
+    "picture": "https://cdn.discordapp.com/attachments/300737243675623424/844296111778693190/unknown.png",
+    "race": "test race",
+    "classes": [
+        {
+            "name": "sample class 1",
+            "level": 1,
+            "feats": [
+                {
+                    "name": "test class feat",
+                    "description": "this should add +10 to stealth",
+                    "modifiers": [
+                        {
+                            "stat": "stealth",
+                            "value": "+10"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "sample class 2",
+            "level": 2
+        }
+    ],
+    "profBonus": 2,
+    "abilities": [
+        {
+            "name": "strength",
+            "value": 13,
+            "savingThrowProficiency": true
+        },
+        {
+            "name": "dexterity",
+            "value": 12,
+            "savingThrowProficiency": false
+        },
+        {
+            "name": "constitution",
+            "value": 10,
+            "savingThrowProficiency": true
+        },
+        {
+            "name": "intelligence",
+            "value": 9,
+            "savingThrowProficiency": false
+        },
+        {
+            "name": "wisdom",
+            "value": 8,
+            "savingThrowProficiency": true
+        },
+        {
+            "name": "charisma",
+            "value": 11,
+            "savingThrowProficiency": false
+        }
+    ],
+    "hitPoint": {
+        "current": 10,
+        "temporary": 4,
+        "maximum": 12
+    },
+    "skills": [
+        {
+            "name": "acrobatics",
+            "ability": "dexterity",
+            "proficiency": true
+        },
+        {
+            "name": "animal handling",
+            "ability": "wisdom",
+            "proficiency": true
+        },
+        {
+            "name": "arcana",
+            "ability": "intelligence",
+            "proficiency": true
+        },
+        {
+            "name": "athletics",
+            "ability": "strength",
+            "proficiency": true
+        },
+        {
+            "name": "deception",
+            "ability": "charisma",
+            "proficiency": true
+        },
+        {
+            "name": "history",
+            "ability": "intelligence",
+            "proficiency": true
+        },
+        {
+            "name": "insight",
+            "ability": "wisdom",
+            "proficiency": true
+        },
+        {
+            "name": "intimidation",
+            "ability": "charisma",
+            "proficiency": true
+        },
+        {
+            "name": "investigation",
+            "ability": "intelligence",
+            "proficiency": false
+        },
+        {
+            "name": "medicine",
+            "ability": "wisdom",
+            "proficiency": false
+        },
+        {
+            "name": "nature",
+            "ability": "intelligence",
+            "proficiency": false
+        },
+        {
+            "name": "perception",
+            "ability": "wisdom",
+            "proficiency": false
+        },
+        {
+            "name": "performance",
+            "ability": "charisma",
+            "proficiency": false
+        },
+        {
+            "name": "persuasion",
+            "ability": "charisma",
+            "proficiency": false
+        },
+        {
+            "name": "religion",
+            "ability": "intelligence",
+            "proficiency": false
+        },
+        {
+            "name": "slight of hand",
+            "ability": "dexterity",
+            "proficiency": false
+        },
+        {
+            "name": "stealth",
+            "ability": "dexterity",
+            "proficiency": false
+        },
+        {
+            "name": "survival",
+            "ability": "wisdom",
+            "proficiency": false
+        }
+    ],
+    "inventory": [
+        {
+            "itemName": "test item",
+            "itemDescription": "this is a test description",
+            "itemWeight": 4,
+            "itemAmount": 5,
+            "isContainer": "NotContainer"
+        }
+    ],
+    "spellAbility": "wisdom",
+    "attacks": [
+        {
+            "name": "test attack",
+            "damageType": "pathetic"
+        }
+    ],
+    "feats": [
+        {
+            "name": "test feat",
+            "description": "this is another test description"
+        },
+        {
+            "name": "feat to test feat modifiers",
+            "description": "this should add +5 to survival",
+            "modifiers": [
+                {
+                    "stat": "survival",
+                    "value": "+5"
+                }
+            ]
+        }
+    ],
+    "notes": [
+        {
+            "name": "test note",
+            "description": "this is the final test description"
+        }
+    ]
+}

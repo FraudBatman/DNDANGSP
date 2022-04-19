@@ -1,0 +1,87 @@
+{
+    "name": "yoske hanamur",
+    "picture": "https://cdn.discordapp.com/attachments/833468117828108309/957185507555684352/VRChat_1920x1080_2022-03-26_00-12-53.612.png",
+    "race": "Trash Can Gremlin",
+    "classes": [
+        {
+            "name": "Junes Employee",
+            "level": 5
+        },
+        {
+            "name": "Best Boi",
+            "level": 17
+        }
+    ],
+    "abilities": [
+        {
+            "name": "strength",
+            "value": 9,
+            "savingThrowProficiency": false
+        },
+        {
+            "name": "dexterity",
+            "value": 14,
+            "savingThrowProficiency": false
+        },
+        {
+            "name": "constitution",
+            "value": 10,
+            "savingThrowProficiency": false
+        },
+        {
+            "name": "intelligence",
+            "value": -3,
+            "savingThrowProficiency": false
+        },
+        {
+            "name": "wisdom",
+            "value": 10,
+            "savingThrowProficiency": false
+        },
+        {
+            "name": "charisma",
+            "value": 19,
+            "savingThrowProficiency": false
+        }
+    ],
+    "hitPoint": {
+        "current": 10,
+        "temporary": 4,
+        "maximum": 12
+    },
+    "skills": [
+        {
+            "name": "acrobatics",
+            "ability": "dexterity",
+            "proficiency": true
+        }
+    ],
+    "inventory": [
+        {
+            "itemName": "test item",
+            "itemDescription": "this is a test description",
+            "itemWeight": 4,
+            "itemAmount": 5,
+            "isContainer": "NotContainer"
+        }
+    ],
+    "spellAbility": "wisdom",
+    "attacks": [
+        {
+            "name": "test attack",
+            "damageType": "pathetic"
+        }
+    ],
+    "feats": [
+        {
+            "name": "test feat",
+            "description": "this is another test description"
+        }
+    ],
+    "notes": [
+        {
+            "name": "test note",
+            "description": "this is the final test description"
+        }
+    ]
+}
