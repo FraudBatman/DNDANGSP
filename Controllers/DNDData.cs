@@ -8,11 +8,17 @@ namespace DNDANGSP.Controllers;
 [Route("[controller]")]
 public class DNDData : ControllerBase
 {
-    [HttpGet(Name = "GetExampleCharacter")]
-    public string GetExampleCharacter()
+    [HttpGet("{id}")]
+    public string GetCharacterById(string id)
     {
-        var chara = new Character("Example");
-
-        return JsonConvert.SerializeObject(chara);
+        if (id.ToLowerInvariant() == "example")
+        {
+            return JsonConvert.SerializeObject(new Character("Example"));
+        }
+        if (id.ToLowerInvariant() == "yosuke")
+        {
+            return JsonConvert.SerializeObject(new Character("Yosuke"));
+        }
+        return null;
     }
 }

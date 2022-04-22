@@ -41,6 +41,10 @@ public class Character
         {
             copy = ExampleCharacter();
         }
+        if (charID == "Yosuke")
+        {
+            copy = Yosuke();
+        }
 
 
         if (copy != null)
@@ -68,6 +72,19 @@ public class Character
         var fs = new FileStream("assets/exampleCharacter.json", FileMode.Open);
         var sr = new StreamReader(fs);
         var character = JsonConvert.DeserializeObject<Character>(sr.ReadToEnd());
+        fs.Close();
+        if (character == null)
+            throw new NullReferenceException("Example Character deserialized to null");
+        else
+            return character;
+    }
+
+    private static Character Yosuke()
+    {
+        var fs = new FileStream("assets/yosuke.json", FileMode.Open);
+        var sr = new StreamReader(fs);
+        var character = JsonConvert.DeserializeObject<Character>(sr.ReadToEnd());
+        fs.Close();
         if (character == null)
             throw new NullReferenceException("Example Character deserialized to null");
         else

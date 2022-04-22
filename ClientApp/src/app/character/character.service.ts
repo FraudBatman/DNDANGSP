@@ -8,8 +8,7 @@ import { ICharacter } from "../../models/character";
 })
 export class CharacterService {
 
-  private testUrl = "../../assets/exampleCharacter.json"
-  private apiUrl = "DNDData"
+  private apiUrl = "DNDData/example"
 
   public character$ = new BehaviorSubject<ICharacter>({} as any);
   public charLoaded = false;
